@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer - Pomotime</title>
+    <link rel="shortcut icon" href="./assets/images/panda.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="first">
+            <header class="header">
+                <nav class="nav">
+                    <div class="navigator">
+                        <h1 class="navigator__h1">
+                            <a href="index.html">
+                                <picture>
+                                    <img src="./assets/images/panda.png" alt="pomotime icon">
+                                </picture>
+                                Pomotime
+                            </a>
+                        </h1>
+                        <span class="navigator__span">
+                            <button class="navigator__span--btn" id="optionSetting">
+                                <picture>
+                                    <img src="./assets/images/settings.png" alt="settings icon">
+                                </picture>
+                                <div>Setting</div>
+                            </button>
+                            <button class="navigator__span--btn">
+                                <picture>
+                                    <img src="./assets/images/login.png" alt="login icon">
+                                </picture>
+                                <div>Login</div>
+                            </button>
+                        </span>
+                    </div>
+                </nav>
+            </header>
+            <div class="core">
+                <div class="coredur">
+                    <div class="progress-bar">
+                        <div class="progress-bar-inside">
+                            
+                        </div>
+                    </div>
+                    <div class="time">
+                        <div class="time-inside">
+                            <div class="selection-butons">
+                                <button class="selection-butons-btn buton-active">Pomodoro</button><button id="shortF" class="selection-butons-btn">Short Break</button><button class="selection-butons-btn">Long Break</button>
+                            </div>
+                            <div id="timer-string" class="time-selected">25:00</div>
+                            <div class="content-start">
+                                <button class="content-start-btn">
+                                    START
+                                </button>
+                                <div class="advanced-round">
+                                    <button class="advanced-round-btn">
+                                        <img class="advanced-round-btn-img" src="./assets/images/advance.png" alt="right-icon">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pomodoro-number">#1</div>
+                        <div class="music">Would you like to concentrate with music?</div>
+                    </div>
+                    <div class="currentTask">
+                        <div class="allTasks">
+                            <span class="allTasks-span">Tasks</span>
+                            <div class="menu-tasks">
+                                <button class="menu-tasks-btn">
+                                    <img class ="menu-tasks-btn-img" src="./assets/images/menu-icon.png" alt="menu-icon">    
+                                </button>
+                                <div class="life-tasks">
+                                    <div class="lifes-tasks-status"><img src="./assets/images/recicle.png" alt="recicle icon">Clear finished tasks</div>
+                                    <div class="lifes-tasks-status"><img src="./assets/images/clear-black.png" alt="clear icon">Clear act pomodoros</div>
+                                    <div class="lifes-tasks-status"><img src="./assets/images/save-black2.png" alt="save icon">Save as template</div>
+                                    <div class="lifes-tasks-status"><img src="./assets/images/plus-black.png" alt="plus blak icon">Add from templates</div>
+                                    <div class="lifes-tasks-status"><img src="./assets/images/recicle.png" alt="recicle icon">Clear all tasks</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="taskstodo"></div>
+                        <div class="addTask">
+                            <img src="./assets/images/plus-circle-white.png" alt="plus circle white">
+                            <div class="task-configure">Add Task</div>
+                        </div>
+                        <div class="createTask">
+                            <div class="createTask-padding">
+                                <div class="createTask-relative">
+                                    <div class="createTask-text">
+                                        <div class="createTask-text-inside">
+                                            <div class="createTask-text-inside-width">
+                                                <input type="text" id="createTaskName" class="createTask-text-inside-width-btn" placeholder="What are you working on?" value>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="status-pomodoros">
+                                        <div class="status-pomodoros-inside">
+                                            <div class="status-pomodoros-inside-width">
+                                                <div class="status-pomodoros-inside-width-margin">
+                                                    <span class="status-pomodoros-inside-width-margin-span">Est Pomodoros</span>
+                                                </div>
+                                                <input type="number" id="pomodoro-input" class="pomodoros-number-input" value="1" min="0" step="1" >
+                                                <button class="pomodoro-upgrade">
+                                                    <img src="./assets/images/caret-up.png" alt="caret up">
+                                                </button>
+                                                <button class="pomodoro-upgrade">
+                                                    <img src="./assets/images/caret-down.png" alt="caret-down">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="interaction">
+                                <button class="interaction-delete">Delete</button>
+                                <div class="other-interaction">
+                                    <button class="other-interaction-first-btn">
+                                        Cancel
+                                    </button>
+                                    <button class="other-interaction-second-btn">
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="setting-options" id="manuel">
+                <div class="setting-options-inside">
+                    <img src="./assets/images/come-back.png" alt="remove icon" id="close-settings">
+                    <div class="sc-kfGgVZ grXAtj"><div class="sc-cqCuEk cWExJP"><div class="sc-hmXxxW endICT">Timer Setting</div><div class="sc-kLIISr bYcVtm"><div class="sc-qrIAp bXGgiY"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Time (minutes)</span></div><div class="sc-iGrrsa dklaHf"><div class="sc-bmyXtO bRPrqV"><label class="sc-dEoRIm bNXsNH">Pomodoro</label><input type="number" min="0" step="1" class="sc-iAyFgw sc-jtggT ehxkK" value="25"></div><div class="sc-bmyXtO bRPrqV"><label class="sc-dEoRIm bNXsNH">Short Break</label><input type="number" min="0" step="1" class="sc-iAyFgw sc-jtggT ehxkK" value="10"></div><div class="sc-bmyXtO bRPrqV"><label class="sc-dEoRIm bNXsNH">Long Break</label><input type="number" min="0" step="1" class="sc-iAyFgw sc-jtggT ehxkK" value="20"></div></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Auto start Breaks?</span></div><div class="sc-ebFjAB lnqwHM"><div class="sc-jKVCRD dqroNL"></div></div></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Auto start Pomodoros?</span></div><div class="sc-ebFjAB lnqwHM"><div class="sc-jKVCRD dqroNL"></div></div></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Long Break interval</span></div><input type="number" min="1" step="1" width="70" class="sc-iAyFgw sc-jtggT igsMZt" value="4"></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Alarm Sound</span></div><div class="sc-fcdeBU eqTyGp"><div width="130" font-size="14" class="sc-jVODtj bimKCD"><div font-size="14" class="sc-kUaPvJ dIFQZl">Kitchen<img src="./assets/images/down-arrow-black.png" class="sc-giadOv bDUyKm"></div><div class="sc-ipXKqB cDefoS"><div class="sc-fONwsr fzjEyv"><div class="sc-VJcYb cjgSZh">Bell</div><div class="sc-VJcYb cjgSZh">Bird</div><div class="sc-VJcYb cjgSZh">Digital</div><div class="sc-VJcYb cjgSZh">Kitchen</div><div class="sc-VJcYb cjgSZh">Wood</div></div></div></div></div></div><div class="sc-LKuAh kolnKZ"><div class="sc-kaNhvL jUwRBC"><div class="sc-hzNEM jdBBRz">38</div><input type="range" min="0" max="100" class="slider sc-iBEsjs bgrrrc" id="myRange" value="38"></div></div><div class="sc-gmeYpB fVwttT">repeat<input type="number" min="1" step="1" class="sc-iAyFgw sc-kZmsYB ikOhFT" value="1"></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Ticking Sound</span></div><div class="sc-fcdeBU eqTyGp"><div width="130" font-size="14" class="sc-jVODtj bimKCD"><div font-size="14" class="sc-kUaPvJ dIFQZl">None<img src="./assets/images/down-arrow-black.png" class="sc-giadOv bDUyKm"></div><div class="sc-ipXKqB cDefoS"><div class="sc-fONwsr fzjEyv"><div class="sc-VJcYb cjgSZh">None</div><div class="sc-VJcYb cjgSZh">Ticking Fast</div><div class="sc-VJcYb cjgSZh">Ticking Slow</div></div></div></div></div></div><div class="sc-LKuAh kolnKZ"><div class="sc-kaNhvL jUwRBC"><div class="sc-hzNEM jdBBRz">50</div><input type="range" min="0" max="100" class="slider sc-iBEsjs bgrrrc" id="myRange" value="50"></div></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Hour Format</span></div><div class="sc-fcdeBU eqTyGp"><div width="130" font-size="14" class="sc-jVODtj bimKCD"><div font-size="14" class="sc-kUaPvJ dIFQZl">24-hour<img src="./assets/images/down-arrow-black.png" class="sc-giadOv bDUyKm"></div><div class="sc-ipXKqB cDefoS"><div class="sc-fONwsr fzjEyv"><div class="sc-VJcYb cjgSZh">24-hour</div><div class="sc-VJcYb cjgSZh">12-hour</div></div></div></div></div></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Dark Mode when running</span></div><div class="sc-ebFjAB lnqwHM"><div class="sc-jKVCRD dqroNL"></div></div></div></div><div class="sc-qrIAp bXGgiY"><div class="sc-kxynE cOLWTW"><div class="sc-iqzUVk kkIPFY"><span class="sc-ipZHIp MRJTV">Notification</span></div><div class="sc-fcdeBU eqTyGp"><div width="80" font-size="14" class="sc-jVODtj fivJrp"><div font-size="14" class="sc-kUaPvJ dIFQZl">Last<img src="./assets/images/down-arrow-black.png" class="sc-giadOv bDUyKm"></div><div class="sc-ipXKqB cDefoS"><div class="sc-fONwsr fzjEyv"><div class="sc-VJcYb cjgSZh">Every</div><div class="sc-VJcYb cjgSZh">Last</div></div></div></div><input type="number" min="1" step="1" class="sc-iAyFgw sc-cooIXK doqqMy" value="5">min</div></div></div></div></div><div class="sc-dliRfk ZrdRV"><button class="sc-bxivhb sc-ifAKCX sc-chbbiW vUYwY">OK</button></div></div>
+                </div>
+            </div>
+        </section>
+        <div class="explain content">
+            <h1 class="explain-h1">
+                An online Pomodoro Timer to boost your productivity
+            </h1>
+        </div>
+        <div class="titlePomo content" >
+            <h2 class="copy__header">What is Pomotime?</h2>
+            <p class="copy__text">
+                
+          Pomotime is a customizable pomodoro timer that works on
+          desktop &amp; mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding. This app is inspired by <a href="https://francescocirillo.com/pages/pomodoro-technique" target="_blank" rel="noopener">Pomodoro Technique</a> 
+          which is a time management method developed by Francesco
+          Cirillo.
+            </p>
+        </div>
+        <div class="titlePomo content">
+            <h2 class="copy__header">What is Pomodoro Technique?</h2>
+            <p class="copy__text">
+                
+          The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato',
+          after the tomato-shaped kitchen timer that Cirillo used as a university student. - <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank" rel="noopener">Wikipedia</a>
+          
+            </p>
+        </div>
+        <div class="titlePomo content" >
+            <h2 class="copy__header">How to use the Pomodoro Timer?</h2>
+            <ol class="features__list-ol">
+                <li><strong>Add tasks</strong> to work on today</li>
+                <li>
+                <strong>Set estimate pomodoros</strong> (1 = 25min of work) for each tasks
+                </li>
+                <li><strong>Select a task</strong> to work on</li>
+                <li>
+                <strong>Start timer</strong> and focus on the task for 25 minutes
+                </li>
+                <li>
+                <strong>Take a break</strong> for 5 minutes when the alarm ring
+                </li>
+                <li>
+                <strong>Iterate</strong> 3-5 until you finish the tasks
+                </li>
+            </ol>
+        </div>
+        <div class="titlePomo content">
+            <h2 class="copy__header">Features</h2>
+            <ul class="features__list">
+            <li>
+                <strong>Responsive design</strong> that works with desktop
+                and mobile
+            </li>
+            <li>
+                <strong>Color transition</strong> to switch moods between
+                work time and rest time
+            </li>
+            <li>
+                <strong>Audio notification</strong> at the end of a timer
+                period
+            </li>
+            <li>
+                <strong>Customizable timer</strong> intervals to suit your
+                preference
+            </li>
+            </ul>
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="footer__allrights content">©Pomotime 2022. All Rights Reserved.</div> 
+            </div>
+        </footer>    
+    </div>
+</body>
+<script src="./assets/js/index.js"></script>
+</html>
